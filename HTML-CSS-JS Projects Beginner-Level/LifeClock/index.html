@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life in Weeks Calculator</title>
+
+<!-- Cute Rounded Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    /* GLOBAL */
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f9fafb;
+        font-family: "Fredoka", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;   /* Better than 100vh (fixes mobile browser issues) */
+        box-sizing: border-box;
+    }
+
+    /* CARD */
+    .card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 420px;
+        padding: 28px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    h2 {
+        font-size: clamp(22px, 4vw, 28px);
+        margin-bottom: 18px;
+        color: #333;
+    }
+
+    input {
+        width: 100%;
+        padding: 15px;
+        font-size: clamp(16px, 4vw, 18px);
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        outline: none;
+        margin-bottom: 20px;
+        transition: 0.2s;
+    }
+    .input-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+
+    input:focus {
+        border-color: #6366f1;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background: #6366f1;
+        color: white;
+        font-size: clamp(16px, 4vw, 20px);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    button:hover {
+        background: #4f46e5;
+    }
+
+    .result {
+        margin-top: 22px;
+        font-size: clamp(18px, 4vw, 20px);
+        color: #111;
+        font-weight: 500;
+        min-height: 30px;
+        line-height: 1.4;
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 480px) {
+        .card {
+            padding: 22px;
+        }
+
+        button {
+            padding: 17px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <h2>Life Clock Meter</h2>
+    <div class="input-wrapper">
+    <input type="number" id="ageInput" placeholder="Enter your age..." />
+    </div>
+    <button onclick="lifeInWeeks()">Calculate</button>
+    <div class="result" id="resultBox"></div>
+</div>
+
+<script>
+function lifeInWeeks() {
+    const age = document.getElementById("ageInput").value;
+
+    if (age === "" || age < 0 || age > 90) {
+        document.getElementById("resultBox").innerHTML = "Please enter a valid age (0–90).";
+        return;
+    }
+
+    const yearsRemaining = 90 - age;
+
+    const days = yearsRemaining * 365;
+    const weeks = yearsRemaining * 52;
+    const months = yearsRemaining * 12;
+
+    document.getElementById("resultBox").innerHTML =
+        `You have ${days} days, ${weeks} weeks, and ${months} months left.`;
+}
+</script>
+
+</body>
+</html>
