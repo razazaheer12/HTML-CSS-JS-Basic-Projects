@@ -9,7 +9,7 @@
   <p>A sleek, dark-themed, and fully responsive Pricing Table Section built with pure HTML and CSS.</p>
 
   <p>
-    <a href="#-preview">Preview</a> •
+    <a href="#-https://pricing-card12.netlify.app/">Preview</a> •
     <a href="#-features">Features</a> •
     <a href="#-technologies">Technologies</a> •
     <a href="#-how-to-run">How to Run</a> •
