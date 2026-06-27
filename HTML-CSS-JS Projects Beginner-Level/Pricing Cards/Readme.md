@@ -54,7 +54,8 @@ The pricing table features:
 
 ## 📸 Preview
 
-![Pricing Table Preview](https://placehold.co/1200x600/0d0d14/00aaff?text=Pricing+Table+Preview)
+<img width="947" height="410" alt="image" src="https://github.com/user-attachments/assets/f2ea39ea-1f71-4b21-96a7-cbe87101d1ff" />
+
 
 ---
 
